@@ -1,0 +1,35 @@
+body {
+  background: rgb(255,255,255);
+  text-align: center;
+
+}
+
+head {
+  font-family: Times;
+  font-weight: bold;
+}
+
+
+#dp:hover{
+  color: white
+}
+
+
+/* for class */
+.theText{
+  border-style: solid;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+
+  line-height: 900px;
+  text-align:center;
+  height: 200px;
+}
+
+.thePicture{
+  line-height: 900px;
+  text-align:center;
+  height: 200px;
+}
