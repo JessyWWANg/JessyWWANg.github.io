@@ -1,0 +1,19 @@
+body {
+  font-family:Avenir;
+  background: rgba(20,55,70,.5);
+  text-align: center;
+
+}
+
+head {
+  font-family: Times;
+  font-weight: bold;
+}
+
+/* for class */
+.theAuthor{
+  padding-left: 50px;
+  margin: 25px;
+}
+
+.theAuthor a:hover

@@ -1,0 +1,32 @@
+body {
+background-color: lightgrey;
+}
+
+@media screen and (max-width: 600px){
+  body{
+    background-color: black;
+  }
+}
+#theFlex {
+  display: flex;
+  background-color: hotpink;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2vh;
+
+
+}
+
+.theFlexi {
+  background-color: blue;
+    color:white;
+    padding:5vw;
+    text-decpration:none;
+    /* vw-view port width to move the word size within the size of window  */
+    font-size: 5vw;
+
+}
+
+.theFlexi:hover{
+  color:yellow;
+}
