@@ -1,0 +1,21 @@
+body {
+  font-family:monospace;
+  background: rgb(255,140,20);
+  text-align: center;
+}
+
+.articles {
+  /* margin: 350px; */
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+div.box {
+  text-align: left;
+  width:320px;
+  padding:20px;
+  border:5px solid;
+  margin:10px;
+}
