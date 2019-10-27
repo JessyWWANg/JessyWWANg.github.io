@@ -1,0 +1,208 @@
+
+/* @font-face{
+    font-family: 'Limelight';
+    src : url('font/Limelight-Regular copy.ttf')format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Scheherazade';
+    src : url('Scheherazade-Regular copy.ttf')format('svg');
+} */
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: monospace;
+  font-size: 13px;
+  background: rgba(155,89,61,.5);
+  text-align: center;
+  text-decoration: none;
+  padding: 60px;
+  /* border:5px solid grey; */
+  margin:10px;
+  color:lime;
+
+}
+
+head {
+  font-family: monospace;;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+/* // */
+main {
+  /* background: white; */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: auto; */
+
+  /* margin: auto; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main div {
+
+  /* color: white; */
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  /* resize: vertical;
+  overflow: auto; */
+}
+
+/* flex box to center and align */
+.parent {
+  margin: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.parent img {filter: blur(2px);
+    /* https://blog.csdn.net/FungLeo/article/details/49848905 */
+    transition:All 2s ease-in-out;
+    -webkit-transition:All 2s ease-in-out;
+    -moz-transition:All 2s ease-in-out;
+    -o-transition:All 2s ease-in-out;
+ }
+.parent img:hover{
+  filter: none;
+  /* https://blog.csdn.net/FungLeo/article/details/49848905 */
+  transform:rotate(360deg);
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+}
+.M img {filter: opacity(30%);}
+.M img:hover{filter:none;}
+/* https://www.jianshu.com/p/9fe74e34e3d3 */
+.img-group {
+  position: relative;
+  display: inline-block;
+  background-size: 50px 100px；
+}
+/* hidden text */
+.img-tip {
+  position: absolute;
+  bottom: 0;
+  background: #fff);
+  color: rgb(250,223,140);
+  opacity: 0.5;
+  display: none;
+}
+/* hover to show text */
+.img-group:hover .img-tip {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 20;
+  color: red;
+  background: lime;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #FF5950, 0 0 40px #fff;
+}
+
+.articles {
+  /* margin: 350px; */
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+div.box {
+  text-align: left;
+  width:620px;
+  padding:20px;
+  border:5px solid;
+  margin:50px;
+}
+
+
+
+r {color: lime;}
+r:hover{
+  color:red;
+  text-transform: uppercase;
+}
+/* fadein animation */
+@keyframes fade-in
+{
+	0%{ opacity: 0;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes fade-in{
+    0%{ opacity: 0;}
+    100%{opacity:1;}
+}
+@-ms-keyframes fade-in{
+    0%{ opacity: 0;}
+    100%{opacity:1;}
+}
+@-o-keyframes fade-in{
+    0%{ opacity: 0;}
+    100%{opacity:1;}
+}
+@-moz-keyframes fade-in{
+    0%{ opacity: 0;}
+    100%{opacity:1;}
+}
+
+r:hover{
+    /* original opacity */
+    opacity: 0;
+    /* delay for 0s, play 1time */
+    animation: fade-in 4s ease 0s 10;
+    -webkit-animation: fade-in 4s ease 0s 10;
+    -moz-animation: fade-in 4s ease 0s 10;
+    -o-animation: fade-in 4s ease 0s 10;
+    -ms-animation: fade-in 4s ease 0s 10;
+
+    /* animation-end */
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+/* keep middle */
+.va {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 280px;
+}
+.box:hover{
+  color:rgba(142,0,22,.3);
+}
+
+i {
+  font-style: italic;
+}
+
+inv {
+  filter: opacity(0%);
+}
+inv:hover{
+  filter:none;
+  color: lime;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px #FF5950, 0 0 70px #fff;
+}
+
+aa:hover{
+  filter: blur(2px);
+  color: red;
+  font-weight: bold;
+}
