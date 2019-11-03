@@ -18,10 +18,10 @@ body {
   text-align: right;
   color:#D76735;
 }
-/* .al2{
-  font-weight:bolder;
-  font-size: 10;
-  /* text-align: left; */
-  /* color:#D76735;
-  transform: scale(-1, 1); */
-/* } */
+
+#myButton {
+  background-color: lime;
+  width: 70px;
+  height: 70px;
+  border-radius:60%;
+}
