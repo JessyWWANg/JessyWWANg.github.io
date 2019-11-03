@@ -1,0 +1,27 @@
+body {
+  font-family:monospace;
+  background: rgba(20,55,70,.5);
+  text-align: center;
+}
+
+.gradient{
+  float: left;
+  height: 770px;
+  width: 100%;
+  background: linear-gradient(to bottom right, #8FB0A9, transparent);
+  shape-outside: linear-gradient(to bottom right, #8FB0A9, transparent);
+  shape-image-threshold: .5;
+}
+.al{
+  font-weight:bolder;
+  font-size: 20;
+  text-align: right;
+  color:#D76735;
+}
+
+#myButton {
+  background-color: lime;
+  width: 70px;
+  height: 70px;
+  border-radius:60%;
+}
