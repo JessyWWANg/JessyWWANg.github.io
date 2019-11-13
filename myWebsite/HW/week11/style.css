@@ -1,0 +1,25 @@
+.mode {
+  /* margin: 350px; */
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+div.box {
+  text-align: left;
+  width:220px;
+  padding:20px;
+  border:5px;
+  margin:50px;
+}
+
+/* deco */
+p{
+  background-color: rgb(37,173,215);
+  border-radius: 25px;
+  font-family: monospace;
+  font-size: 20px;
+  color: pink;
+  text-align: center;
+}
