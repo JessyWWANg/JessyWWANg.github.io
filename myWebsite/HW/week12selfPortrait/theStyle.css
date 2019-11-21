@@ -1,0 +1,28 @@
+.name:hover{
+  display: none;
+
+}
+.name{
+  text-decoration: none;
+  color: #81A8CC;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.name1{
+  text-decoration: none;
+  color: #E17F7F;
+  font-size: 40px;
+  font-family: monospace;
+}
+#info {
+	position: absolute;
+	top: 500px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+  color: #81A8CC;
+  font-size: 40px;
+  font-family: monospace;
+}

@@ -1,0 +1,69 @@
+
+<html>
+<script src="js/three.js"></script>
+<link type="text/css" rel="stylesheet" href="theStyle.css">
+<meta name=“viewport” content=“user-scalable=no, width=device-width, initial-scale-1, maximum-scale-1>
+<meta charset=“utf-8”>
+	<head>
+		<title>SELfPorTRaiT</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<!-- 3d script -->
+		<script>
+			//https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
+			//create scene, set bg color
+			var scene = new THREE.Scene();
+			scene.background = new THREE.Color( 0x81A8CC );
+			//camera to see, para(4):field of view, aspect ratio, near, far
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+			//set renderer(here use webgl)
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+			//default cube, set size para3
+			var geometry = new THREE.BoxGeometry( 3, 1, 4 );
+			//set mat para...
+			// var cubeMaterials =
+			// [
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('text/1.png'),side:THREE.DoubleSide}),
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('1.png'),side:THREE.DoubleSide}),
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('1.png'),side:THREE.DoubleSide}),
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('1.png'),side:THREE.DoubleSide}),
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('1.png'),side:THREE.DoubleSide}),
+			// 	new THREE.MeshBasicMaterial({map:new THREE.TextureLoader().load('1.png'),side:THREE.DoubleSide})
+			// ];
+			// var material =new THREE.MeshFaceMaterial(cubeMaterials);
+			var material = new THREE.MeshBasicMaterial( { color: 0xF9C82F, reflectivity: .4 });
+			var cube = new THREE.Mesh( geometry, material );
+			//add obj to scene
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			//animation, rotate
+			var animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+				renderer.render( scene, camera );
+			};
+			//run ani()
+			animate();
+		</script>
+		<!-- basic script -->
+		<script src="js.js"></script>
+		<!-- hover funcs -->
+		<!-- map -->
+		<div id="info">
+		<map name="planetmap">
+  	<area shape="rect" coords="0,0,50,50"><a class="name" href="1.html">王  子  歆</a></area>
+		</map>
+		</div>
+
+	</body>
+</html>

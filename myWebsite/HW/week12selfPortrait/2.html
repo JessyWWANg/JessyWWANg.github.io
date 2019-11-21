@@ -1,0 +1,145 @@
+
+<html>
+<script src="js/three.js"></script>
+<link type="text/css" rel="stylesheet" href="theStyle.css">
+<meta name=“viewport” content=“user-scalable=no, width=device-width, initial-scale-1, maximum-scale-1>
+<meta charset=“utf-8”>
+	<head>
+		<title>🍌🍌🍌</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<!-- 3d script -->
+		<script>
+			//https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
+			//create scene, set bg color
+			var scene = new THREE.Scene();
+			scene.background = new THREE.Color( 0xE17F7F );
+			//camera to see, para(4):field of view, aspect ratio, near, far
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+			//set renderer(here use webgl)
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			//default cube, set size para3
+			//a basic rotating mesh
+			var geometry = new THREE.BoxGeometry( 2.1,2.1,2.1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, reflectivity: .4 });
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+			//my face
+				var myFace = new THREE.Mesh(
+				new THREE.OctahedronGeometry(2,1),
+				new THREE.MeshBasicMaterial( {
+				color: 0xff0051,
+				// reflectivity: .4,
+				// opacity: .2
+				// shading: THREE.FlatShading ,
+				// metalness: 0,
+				// roughness: 0.8
+			} )
+			);
+			myFace.position.y = 0;
+			// myFace.rotateZ(Math.PI/3);
+			// myFace.castShadow = true;
+			scene.add(myFace);
+
+			//cube1
+				var myE1 = new THREE.Mesh(
+				new THREE.BoxGeometry( 2.1, 2.1, 2.1 ),
+				new THREE.MeshBasicMaterial( {
+				color: 0xffffff,
+				reflectivity: .4
+				// shading: THREE.FlatShading ,
+				// metalness: 0,
+				// roughness: 0.8
+			} )
+			);
+			myE1.position.y = 0;
+			myE1.rotateZ(Math.PI/3);
+
+			//cube2
+				var myE2 = new THREE.Mesh(
+				new THREE.BoxGeometry( 2.1, 2.1, 2.1 ),
+				new THREE.MeshBasicMaterial( {
+				color: 0xffffff,
+				reflectivity: .4
+				// shading: THREE.FlatShading ,
+				// metalness: 0,
+				// roughness: 0.8
+			} )
+			);
+			myE2.position.y = 0;
+			myE2.rotateZ(Math.PI/3*2);
+			myE2.rotateY(Math.PI/3*2);
+
+			// myFace.rotateZ(Math.PI/3);
+			// myFace.castShadow = true;
+			scene.add(myE1);
+			scene.add(myE2);
+
+			//true Face
+			//cube2
+				var face = new THREE.Mesh(
+				new THREE.SphereGeometry( .06, .3, .3 ),
+				new THREE.MeshBasicMaterial( {
+				color: 0xffccb3,} ));
+				face.position.z = 4.7;
+				face.position.y = 0;
+
+
+
+			//eye
+			var l = new THREE.Mesh(
+			new THREE.SphereGeometry( 0.02, .1, .1 ),
+			new THREE.MeshBasicMaterial( {
+			color: 0x4d2800,} ));
+			l.position.z = 4.8;
+			l.position.y = 0;
+
+
+			// myFace.rotateZ(Math.PI/3);
+			// myFace.castShadow = true;
+			scene.add(face);
+			scene.add(l);
+
+			//camera
+			camera.position.z = 5;
+
+
+			//animation, rotate
+			var animate = function () {
+				requestAnimationFrame( animate );
+				//basic cube rotate
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+				//pink ball rotate
+				// myFace.rotation.x += 0.01;
+				// myFace.rotation.y += 0.01;
+
+				myE1.rotation.x += 0.01;
+				myE1.rotation.y += 0.01;
+
+				myE2.rotation.x += 0.01;
+				myE2.rotation.y += 0.01;
+
+				l.rotation.x += 0.01;
+				face.rotation.x -= 0.01;
+
+				renderer.render( scene, camera );
+			};
+			//run ani()
+			animate();
+
+
+
+
+		</script>
+
+
+	</body>
+</html>
