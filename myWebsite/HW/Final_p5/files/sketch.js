@@ -1,14 +1,18 @@
 
 
 let bone;
+let song;
 
 function preload() {
+  song = loadSound('Radiohead_Daydreaming.mp3');
   bone = loadModel('assets/bone2.obj', true);
 }
 
 function setup() {
+  song.loop();
   cvs = createCanvas(600, 600, WEBGL);
-  cvs.position(380,40);
+  cvs.position(screen.width/2-450, screen.height/2-450);
+  // cvs.position(380,40);
 }
 
 
@@ -40,8 +44,4 @@ function draw() {
   boneColor.setAlpha(alpha);
   specularMaterial(boneColor);
   model(bone);
-}
-
-function test(){
-  console.log("sb");
 }

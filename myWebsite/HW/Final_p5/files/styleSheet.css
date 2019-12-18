@@ -8,13 +8,16 @@ canvas{
 
 
 
-.flexBox {
+.gridContainer {
   /* margin: 350px; */
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(7, 14.2857%);
+  grid-template-rows: repeat(4, 20%);
+  /* flex-flow: row wrap;
   align-content: center;
   /* justify-content: space-between; */
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 
@@ -30,6 +33,7 @@ canvas{
 
 #Bpics {
   text-align: center;
+  vertical-align: middle;
   width:230px;
   height:230px;
   line-height: 1500%;
@@ -49,11 +53,18 @@ canvas{
 #num {
   /* 字体统一 */
   /* text-align: center;
-  vertical-align: middle; */
-  font-size: 55px;
+  /* vertical-align: middle; */
+  vertical-align: middle;
+  font-size: 75px;
   color:rgb(233,233,233);
-  font-family:sans-serif;
+  /* font-family: 'Girassol', cursive; */
+  font-family: 'Poiret One', cursive;
 }
+
+#num:hover{
+  color: rgb(242,54,73);
+}
+
 
 /* display main text */
 #MainText{
@@ -65,5 +76,21 @@ canvas{
 
   /* height:300px; */
   /* color: rgb(237,99,89); */
-  color: rgb(196,141,133);
+  /* color: rgb(196,141,133); */
+  color: rgb(242,54,73);
+  font-family: 'Poiret One', cursive;
+}
+
+#MainText1{
+  position: absolute;
+  left: 700px;
+  top: 400px;
+  width:270px;
+  vertical-align: middle;
+
+  /* height:300px; */
+  /* color: rgb(237,99,89); */
+  /* color: rgb(196,141,133); */
+  color: rgb(242,54,73);
+  font-family: 'Noto Serif JP', serif;
 }

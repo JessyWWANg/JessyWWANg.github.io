@@ -6,10 +6,10 @@
 
 //onMouse event
 function mOn1(obj){
-  document.getElementById("num").innerHTML = "T";
+  document.getElementById("num").innerHTML = "W";
 }
 function mOut1(obj){
-	document.getElementById("num").innerHTML = "W";
+	document.getElementById("num").innerHTML = "T";
 }
 //hover buttons to make main text change-articles/reviews/poems
 //Left_text1
@@ -46,9 +46,9 @@ function mOut5(obj){
 }
 
 function mOn6(obj){
-  document.getElementById("MainText").innerHTML =
+  document.getElementById("MainText1").innerHTML =
   "/<br><br>露の世は<br>露の世ながら<br>さりながら<br><br>　　小林 一茶<br>/";
 }
 function mOut6(obj){
-	document.getElementById("MainText").innerHTML = "  ";
+	document.getElementById("MainText1").innerHTML = "  ";
 }
